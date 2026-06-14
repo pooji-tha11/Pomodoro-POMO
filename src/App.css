@@ -1,0 +1,501 @@
+/* App container layout already in index.css */
+
+/* Layout additions */
+.main-content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.left-panel {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+  .timer-display {
+    font-size: 5rem;
+  }
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.header-title {
+  font-weight: 600;
+  font-size: 1.125rem;
+  letter-spacing: -0.02em;
+}
+
+.header-date {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.header-quote {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.theme-toggle {
+  color: var(--text-secondary);
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  background-color: var(--surface-hover);
+  color: var(--text-primary);
+}
+
+/* Timer */
+.timer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 4rem 3rem;
+  position: relative;
+}
+
+.timer-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.settings-btn {
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.settings-btn:hover {
+  background-color: var(--surface-hover);
+  color: var(--text-primary);
+}
+
+.timer-display {
+  font-size: 7.5rem;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  color: var(--text-primary);
+}
+
+.timer-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn-primary {
+  background-color: var(--text-primary);
+  color: var(--bg-color);
+  padding: 0.75rem 2.5rem;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--shadow-color-hover);
+}
+
+.btn-secondary {
+  color: var(--text-secondary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 1rem;
+  background-color: transparent;
+}
+
+.btn-secondary:hover {
+  background-color: var(--surface-hover);
+  color: var(--text-primary);
+}
+
+/* Todo List */
+.todo-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.25rem 0;
+}
+
+.todo-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid var(--border-color);
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.todo-checkbox:checked {
+  background-color: var(--accent-green);
+  border-color: var(--accent-green);
+}
+
+.todo-checkbox:checked::after {
+  content: '';
+  width: 4px;
+  height: 8px;
+  border: solid var(--bg-color);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 3px;
+}
+
+.todo-text {
+  flex: 1;
+  font-size: 0.9375rem;
+  transition: color 0.2s ease;
+}
+
+.todo-text.completed {
+  color: var(--text-secondary);
+  text-decoration: line-through;
+}
+
+.todo-delete {
+  color: var(--text-secondary);
+  opacity: 0;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: opacity 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.todo-item:hover .todo-delete {
+  opacity: 1;
+}
+
+.todo-delete:hover {
+  background-color: var(--surface-hover);
+  color: var(--accent-orange);
+}
+
+.todo-add {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.todo-input {
+  flex: 1;
+  background: none;
+  border: none;
+  border-bottom: 1.5px solid var(--border-color);
+  padding: 0.5rem 0;
+  font-family: inherit;
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  transition: border-color 0.2s ease;
+}
+
+.todo-input:focus {
+  outline: none;
+  border-color: var(--accent-green);
+}
+
+.todo-input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.6;
+}
+
+.btn-add {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background-color: var(--surface-hover);
+}
+
+.btn-add:hover {
+  color: var(--text-primary);
+  background-color: var(--border-color);
+}
+
+/* Daily Summary */
+.summary-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.summary-value {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Settings Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeIn 0.2s forwards ease-out;
+}
+
+.modal-content {
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  transform: translateY(20px);
+  animation: slideUp 0.3s forwards cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.modal-close {
+  color: var(--text-secondary);
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+}
+
+.modal-close:hover {
+  background-color: var(--surface-hover);
+  color: var(--text-primary);
+}
+
+.settings-group {
+  margin-bottom: 2rem;
+}
+
+.settings-label {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.presets {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.preset-chip {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.preset-chip:hover {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+}
+
+.preset-chip.active {
+  background-color: var(--text-primary);
+  color: var(--bg-color);
+  border-color: var(--text-primary);
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  to { transform: translateY(0); }
+}
+
+/* History Card */
+.history-card {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  box-shadow: none;
+}
+
+.history-card:hover {
+  box-shadow: none;
+  background-color: var(--surface-color);
+}
+
+.history-header {
+  margin-bottom: 1rem;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+
+.history-time {
+  color: var(--text-secondary);
+}
+
+/* Timer New Additions */
+.timer-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.timer-status {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-top: -1.5rem;
+  margin-bottom: 1rem;
+  height: 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.timer-shortcuts {
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  opacity: 0.5;
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Empty Todo State */
+.todo-empty-state {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.empty-text {
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  font-style: italic;
+}
+
+/* Momentum Card */
+.momentum-card {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.momentum-dots {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+
+.dot {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  opacity: 0.3;
+  transition: all 0.5s ease;
+}
+
+.dot.filled {
+  opacity: 1;
+  color: var(--text-primary);
+}
+
+.momentum-extra {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-left: 0.5rem;
+  font-weight: 500;
+  font-family: var(--font-mono);
+}
