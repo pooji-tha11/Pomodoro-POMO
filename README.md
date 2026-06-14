@@ -1,16 +1,167 @@
-# React + Vite
+# ☾ Cozy Pomodoro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+*A minimal, cozy Pomodoro companion for quiet focus.*
 
-Currently, two official plugins are available:
+A beautifully crafted productivity web app designed to make focusing feel calm, intentional, and aesthetically pleasing — blending **Apple-inspired minimalism**, **warm retro nostalgia**, and a **cozy late-night study atmosphere**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Built for people who want a simple focus space without the overwhelming feeling of traditional productivity apps.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+### ⏳ Beautiful Pomodoro Timer
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Start, pause, and reset focus sessions
+* Customizable focus & break durations
+* Automatic focus → break transitions
+* Gentle timer completion sounds
+* Fullscreen distraction-free mode
+
+### ✓ Smart Daily Tasks
+
+* Minimal task checklist
+* Add, complete, and remove tasks
+* **Date-aware persistence**
+
+  * Completed tasks reset daily
+  * Incomplete tasks carry over
+
+### ◎ Momentum Tracking
+
+A subtle visual progress system to gently encourage consistency.
+
+* Minimal daily momentum indicators
+* Session tracking without pressure
+* Calm, rewarding feedback
+
+### 🕰 Recent Session History
+
+Track your completed sessions with elegant timestamps.
+
+Example:
+
+```text
+25 min • 8:42 PM
+45 min • 6:15 PM
+60 min • 2:30 PM
+```
+
+### 🌙 Premium Dark Mode
+
+Designed for:
+
+* late-night study sessions
+* deep focus
+* cozy monitor glow vibes
+
+Featuring:
+
+* deep OLED-inspired blacks
+* soft warm contrast
+* subtle premium shadows
+
+### 💾 Persistent Experience
+
+Your focus space remembers you.
+
+Using local storage, the app saves:
+
+* theme preference
+* focus/break durations
+* task progress
+* completed sessions
+* momentum
+* recent history
+
+Refresh-proof ✨
+
+---
+
+## 🎨 Design Philosophy
+
+This app was intentionally designed to feel:
+
+```text
+55% Apple minimalism
+25% cozy warmth
+20% soft retro nostalgia
+```
+
+The goal:
+
+> *A focus app you genuinely want to open.*
+
+No overwhelming analytics.
+No productivity guilt.
+No clutter.
+
+Just a quiet space to focus.
+
+---
+
+## 🛠 Built With
+
+* **React**
+* **Vite**
+* **JavaScript**
+* **Vanilla CSS**
+* **localStorage**
+* **lucide-react**
+
+---
+
+## 🚀 Running Locally
+
+Clone the project:
+
+```bash
+git clone <your-repo-url>
+```
+
+Go into the project:
+
+```bash
+cd your-project-name
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start development server:
+
+```bash
+npm run dev
+```
+
+---
+
+## 📍 Current Status
+
+Currently in active development.
+
+Planned improvements:
+
+* Focus mode polish
+* Better momentum visuals
+* Additional cozy interactions
+* More accessibility improvements
+
+---
+
+## 💭 Why I Built This
+
+I wanted a Pomodoro app that felt calming and intentional instead of overwhelming or overly “productive.”
+
+Something simple.
+
+Something beautiful.
+
+Something I’d actually enjoy opening every day.
+
+---
+
+### *One session at a time.*
