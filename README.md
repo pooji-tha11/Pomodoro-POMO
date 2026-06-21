@@ -80,14 +80,6 @@ Refresh-proof ✨
 
 ## 🎨 Design Philosophy
 
-This app was intentionally designed to feel:
-
-```text
-55% Apple minimalism
-25% cozy warmth
-20% soft retro nostalgia
-```
-
 The goal:
 
 > *A focus app you genuinely want to open.*
